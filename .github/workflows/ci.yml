@@ -21,4 +21,9 @@ jobs:
     
     - name: Validate PHP syntax
       run: |
-        find . -type f -name "*.php" -print0 | xargs -0 -n1 php -1
+        files=$(find . -type f -name "*.php")
+        if [ -n "$files" ]; then
+          echo "$files" | xargs -n1 php -l
+        else
+          echo "No PHP files to check."
+        fi
