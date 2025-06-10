@@ -1,0 +1,9 @@
+# DDEV
+/.ddev/*.log
+/.ddev/secrets.env
+/.ddev/.global_config*
+# Keep these tracked
+!/.ddev/config.yaml
+!/.ddev/docker-compose.*
+!/.ddev/commands/
+!/.ddev/*.yaml
